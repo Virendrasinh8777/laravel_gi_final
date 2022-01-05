@@ -6,6 +6,7 @@ $(document).ready(function(){
 
 });
 
+
 $('.logo-g, .home, .product, .about, .testimonial, .video, .blog, .contact').each(function(){
   $(this).append(`<a href="`+$(this).attr('data-link')+`"class='onscreen-menu' onclick="window.open('`+$(this).attr('data-link')+`', 'toolbar=no, location=no','left=350,width=800,height=860'); return false;"> <i class='far fa-edit'></i></a>`);
 });
