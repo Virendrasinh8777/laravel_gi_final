@@ -253,7 +253,7 @@ $current_criteria = DB::table('criteria_metas')->whereIn('categories', $intArray
 										activeTitle
 									@endif
                              ">
-										
+							
 							<img style="max-width: 18px;margin-right: 10px;"
                             src="{{ url('sardar') }}/img/active-link-icon.png">
                                          {{$mainCategoryAll->name}} </a>
@@ -349,12 +349,17 @@ $current_criteria = DB::table('criteria_metas')->whereIn('categories', $intArray
 								<div class="BigInnerinflatableSub_slider mb-3 image-set">
 								@foreach($productImages as $productImage)
 									<div class="Biginflatables">
-										<div class="img_thumbnail m-auto">
-											<img class="img-fluid" data-magnify="gallery" 
+										<div class="img_thumbnail m-auto slider_blur">
+											
+										<img style="" class="img-fluid blur_bg"
+										 src="{{url('web')}}/media/icon/{{$productImage->image}}">
+                                                    
+										<img class="img-fluid" data-magnify="gallery" 
 											data-src="{{url('web')}}/media/lg/{{$productImage->image}}"  
 											src="{{url('web')}}/media/lg/{{$productImage->image}}"
 											style="background: none;"
 											>
+
 										</div>
 									</div>
 								@endforeach
